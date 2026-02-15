@@ -1,400 +1,827 @@
-<!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mehandis Bridal Rentals - Premium Bridal Dress &amp; Jewellery Rentals</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#FFFFFF",
-                        "background-main": "#000000",
-                        "card-bg": "#1A1A1A",
-                        "border-subtle": "#333333",
-                        "accent-white": "#FFFFFF",
-                        "muted-grey": "#B0B0B0"
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-                },
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Mehandis Bridal Rentals - Premium Bridal Dress &amp; Jewellery Rentals
+    </title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FFFFFF",
+              "background-main": "#000000",
+              "card-bg": "#1A1A1A",
+              "border-subtle": "#333333",
+              "accent-white": "#FFFFFF",
+              "muted-grey": "#B0B0B0",
             },
-        }
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style type="text/tailwindcss">
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Manrope', sans-serif;
-            background-color: #000000;
-        }
-        .text-secondary {
-            color: #B0B0B0;
-        }
-        .star-rating {
-            color: #B0B0B0;
-        }
-        .interactive-accent {
-            background-color: #FFFFFF;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+        background-color: #000000;
+      }
+      .text-secondary {
+        color: #b0b0b0;
+      }
+      .star-rating {
+        color: #b0b0b0;
+      }
+      .interactive-accent {
+        background-color: #ffffff;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
-</head>
-<body class="bg-background-main text-white transition-colors duration-300">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 w-full border-b border-solid border-border-subtle bg-background-main/90 backdrop-blur-md px-6 md:px-20 py-4">
-<div class="max-w-[1200px] mx-auto flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="size-8 text-white">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold tracking-tight text-white uppercase">Mehandis Bridal</h2>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-white transition-colors text-muted-grey" href="#">Home</a>
-<a class="text-sm font-medium hover:text-white transition-colors text-muted-grey" href="#about">About</a>
-<a class="text-sm font-medium hover:text-white transition-colors text-muted-grey" href="#services">Services</a>
-<a class="text-sm font-medium hover:text-white transition-colors text-muted-grey" href="#pricing">Pricing</a>
-<a class="text-sm font-medium hover:text-white transition-colors text-muted-grey" href="#contact">Contact</a>
-</nav>
-<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-10 px-6 interactive-accent text-background-main text-sm font-bold hover:bg-neutral-200 transition-all">
-<span>Book via WhatsApp</span>
-</button>
-</div>
-</header>
-<main class="flex-1">
-<section class="px-6 md:px-20 py-10">
-<div class="max-w-[1200px] mx-auto">
-<div class="relative overflow-hidden rounded-xl min-h-[600px] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center border border-border-subtle" data-alt="Stunning bride in a red luxury lehenga posing elegantly" style='background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFnSKHgXd69in7Q-h7bc0sEoNeCVC5pkdm5PmxuTv-wmRE52eT8hyKLrzpKJXTfrbkkwvNNKT6PkcP4H44YHVpYYRh3db1NqqRzZ-k_TdTd802h2WnRM3rNUxyoVj8vmORO4s6AzWdyPNNOH2O8LxhF4GIVy_zdwxUESvASXbK6Dz4XmZ3XdwOJ-WCQwDdb08jNam_u3Z0S41yGpkf8I14QvRcXnoPCBfongS1ZywVjgnJqKXY_mjA4WYkiphmgu6YJfgP89rjDoAf");'>
-<div class="max-w-3xl space-y-6">
-<p class="text-white text-sm font-bold tracking-[0.2em] uppercase">MEHANDIS BRIDAL RENTALS <br/> Perinthalmanna, Kerala</p>
-<h1 class="text-4xl md:text-7xl font-black leading-tight tracking-tight text-white">
-                        Your Dream Bridal Look <span class="text-white border-b-4 border-white">Starts Here</span>
-</h1>
-<p class="text-lg md:text-xl font-light text-muted-grey">
-                        Mehandis Bridal Rentals is a trusted name in bridal dress and jewellery rentals in Perinthalmanna. We help brides look royal, elegant, and confident on their most special day — without spending lakhs.
-                    </p>
-                    
-<ul class="text-white/80 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base font-medium">
-<li class="flex items-center gap-1">Luxury bridal wear</li>
-<li class="flex items-center gap-1">Premium jewellery collections</li>
-<li class="flex items-center gap-1">Affordable rental packages</li>
-<li class="flex items-center gap-1">Trusted by thousands</li>
-</ul>
-<div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-<button class="flex items-center justify-center gap-2 rounded-full h-14 px-8 interactive-accent text-background-main font-bold text-lg hover:bg-neutral-200 transition-all">
-<span class="material-symbols-outlined">chat</span>
-                            Book Now on WhatsApp
-                        </button>
-<button class="flex items-center justify-center gap-2 rounded-full h-14 px-8 bg-transparent text-white border border-white font-bold text-lg hover:bg-white hover:text-black transition-all">
-                            Explore Instagram Gallery
-                        </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 md:px-20 py-16" id="about">
-<div class="max-w-[1200px] mx-auto">
-<div class="flex flex-col gap-12">
-<div class="flex flex-col gap-4">
-<h2 class="text-white text-sm font-bold uppercase tracking-widest border-l-2 border-white pl-4">ABOUT US</h2>
-<h3 class="text-3xl md:text-5xl font-bold leading-tight max-w-[800px] text-white">
-                        Every bride deserves to look stunning — without financial stress.
-                    </h3>
-<p class="text-muted-grey text-lg max-w-[720px]">
-                        Mehandis Bridal Rentals is a premium bridal rental boutique located in Perinthalmanna, Malappuram district. We specialize in providing high-quality bridal dresses, jewellery, and complete bridal styling support for weddings, engagements, receptions, and special occasions.
-                    </p>
-<p class="text-muted-grey text-lg max-w-[720px]">
-                                With years of experience and strong social media presence, we have styled hundreds of happy brides across Kerala.
-                            </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all">
-<span class="material-symbols-outlined text-3xl">verified</span>
-</div>
-<div class="space-y-2">
-<h4 class="text-xl font-bold text-white">Premium Collection</h4>
-<p class="text-muted-grey leading-relaxed">Luxury bridal wear and premium jewellery collections, featuring trendy and traditional designs, with clean and well-maintained outfits for every bride.</p>
-</div>
-</div>
-<div class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all">
-<span class="material-symbols-outlined text-3xl">favorite</span>
-</div>
-<div class="space-y-2">
-<h4 class="text-xl font-bold text-white">Trusted by Thousands</h4>
-<p class="text-muted-grey leading-relaxed">Built on genuine trust and reviews, we have styled hundreds of happy brides across Kerala with professional and personalized service.</p>
-</div>
-</div>
-<div class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group">
-<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all">
-<span class="material-symbols-outlined text-3xl">payments</span>
-</div>
-<div class="space-y-2">
-<h4 class="text-xl font-bold text-white">Affordable Packages</h4>
-<p class="text-muted-grey leading-relaxed">Luxury bridal looks made truly affordable. Enjoy premium quality, elegant styling, and flawless designs, helping every bride look stunning on her big day without financial stress.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 md:px-20 py-16 bg-background-main" id="services">
-<div class="max-w-[1200px] mx-auto">
-<div class="flex justify-between items-end mb-10 border-b border-border-subtle pb-6">
-<div class="space-y-2">
-<h2 class="text-3xl md:text-4xl font-bold text-white">OUR SERVICES</h2>
-<p class="text-muted-grey">We offer a wide range of bridal outfits and premium jewellery collections.</p>
-</div>
-<a class="text-white font-bold flex items-center gap-2 hover:underline transition-all" href="#">
-                    View details <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle" data-alt="A row of luxury designer bridal lehengas on hangers" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2IRaEnuVdJEni6yBpUKlpbusfB3I2zrw6zAJBiveu_mOH-67JMbSku_4q10jg4HWj-XWbfO9kk0vGr_mp5JsLLW8p6hD27ltt6E1W8LDNdb3cAz0NuSj9_Mr1XTvFdIIDUWYW-SBF_w5FC_PV4M8RHB-4yhNAe5hfJvaLTcpffFU8ZgfduOs9EvC87EXarClL_qwfacYfXAf-DiLbT9XLnceIEGpwS1UKxcdS7DJOe4fTIi_ukbczl_wwMbZ4tzzeqhtqfRRNaWtw");'>
-<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform">
-<h4 class="text-2xl font-bold text-white mb-2">Bridal Dress Rentals</h4>
-<p class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Bridal Lehengas, Wedding Gowns, Engagement &amp; Reception dresses, Traditional Kerala Wear.</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle" data-alt="Close up of intricate gold and diamond bridal necklace set" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIHW3hOH_3IqH0dWtSBdWvkO1zI_-jZGd9C0tkrUn511wUXvOfWyxswTA-4QF47CSSPHjO8lPd5mtLuYstrMfSEnMa_ZIZndc9PHadP9FPspHLG7NaQ3ryS152-ET4Hie3iEEZ1wZtk9s8UkFhcwX5UVHqZC2l1iXAVelq9H4H6vzCXLfgGLEz2PMEFzmdvvv6FqwlHqYJaVmJuBbt0Aaq03GxgjoO0pRv5eU4DJYwtSzBZC7_oDG9NjakEoYBCVvToz0UpYd3ebSP");'>
-<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform">
-<h4 class="text-2xl font-bold text-white mb-2">Jewellery Rentals</h4>
-<p class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Temple Jewellery, Antique Gold Finish, Heavy bridal sets, and Lightweight elegant designs.</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle" data-alt="Professional stylist adjusting a bride's dupatta" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7cXshaI_I4k-Pmr_5TSlncrL7bVb0jfk01wCsA40uQGf-dr6HE3gBAJM3ToomMjlf7PO-EMVlXgLtKHRqxTl2G7VHRZkUQy53JuEoPFLP3jMjT-E66_oACKCjXgnsfTA1ao9uJLCkBmVcdQMF8igeiQRLvowWYnbQnlLTp_tyDK0pI_tCWaPPeZgBXj_NcPgbVwEMDN6uS0autpB5EojkSTZPvmtXPcDfVSUPBYk5FNjzd1LJp32FX3MTgw-Vlcr8ORvzaYMa-Sc-");'>
-<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform">
-<h4 class="text-2xl font-bold text-white mb-2">Look Assistance</h4>
-<p class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">Dress + Jewellery matching, styling guidance, and look suggestions based on face &amp; outfit.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 md:px-20 py-16" id="pricing">
-<div class="max-w-[1200px] mx-auto text-center">
-<h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">PRICING (STARTING RANGE)</h2>
-<p class="text-muted-grey mb-12 max-w-2xl mx-auto">Final pricing depends on design, fabric, and collection. Contact us on WhatsApp for exact prices &amp; availability.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1100px] mx-auto">
-<div class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 relative overflow-hidden hover:border-white transition-colors">
-<h4 class="text-xl font-bold text-white">Bridal Dress Rentals</h4>
-<div class="flex items-baseline gap-1">
-<span class="text-sm font-medium text-muted-grey">Starting from</span>
-<span class="text-4xl font-black text-white">₹5,000</span>
-</div>
-<ul class="text-left space-y-3 w-full border-t border-border-subtle pt-6">
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Multiple sizes &amp; colors
-                        </li>
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Modern + traditional designs
-                        </li>
-</ul>
-<button class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors">Check Availability</button>
-</div>
-<div class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 hover:border-white transition-colors">
-<h4 class="text-xl font-bold text-white">Bridal Jewellery Rentals</h4>
-<div class="flex items-baseline gap-1">
-<span class="text-sm font-medium text-muted-grey">Starting from</span>
-<span class="text-4xl font-black text-white">₹2,000</span>
-</div>
-<ul class="text-left space-y-3 w-full border-t border-border-subtle pt-6">
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Heavy bridal sets
-                        </li>
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Lightweight elegant designs
-                        </li>
-</ul>
-<button class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors">Check Availability</button>
-</div>
-<div class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 hover:border-white transition-colors">
-<h4 class="text-xl font-bold text-white">Bridal Look Packages</h4>
-<div class="flex items-baseline gap-1">
-<span class="text-sm font-medium text-muted-grey">Available via</span>
-<span class="text-4xl font-black text-white">Custom</span>
-</div>
-<ul class="text-left space-y-3 w-full border-t border-border-subtle pt-6">
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Dress + Jewellery matching
-                        </li>
-<li class="flex gap-2 items-center text-muted-grey text-sm">
-<span class="material-symbols-outlined text-white text-sm">check_circle</span> 
-                            Styling guidance
-                        </li>
-</ul>
-<button class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors">Enquire Now</button>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 md:px-20 py-16 bg-card-bg">
-<div class="max-w-[1200px] mx-auto text-center">
-<h2 class="text-3xl font-bold mb-4 text-white">TESTIMONIALS</h2>
-<p class="text-muted-grey mb-12">Hundreds of happy brides across Kerala</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left">
-<p class="italic text-muted-grey text-sm">“Beautiful collection and very affordable pricing. Highly recommended!”</p>
-<div class="flex star-rating pt-2">
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-</div>
-</div>
-<div class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left">
-<p class="italic text-muted-grey text-sm">“Jewellery quality was amazing, everyone asked where we got it from.”</p>
-<div class="flex star-rating pt-2">
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-</div>
-</div>
-<div class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left">
-<p class="italic text-muted-grey text-sm">“Friendly staff and perfect bridal suggestions.”</p>
-<div class="flex star-rating pt-2">
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-</div>
-</div>
-<div class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left">
-<p class="italic text-muted-grey text-sm">“Trusted shop in Perinthalmanna for bridal rentals.”</p>
-<div class="flex star-rating pt-2">
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-<span class="material-symbols-outlined text-xs">star</span>
-</div>
-</div>
-</div>
-<p class="mt-12 text-white font-bold tracking-widest uppercase">Hundreds of happy brides across Kerala</p>
-</div>
-</section>
-<section class="py-16 overflow-hidden">
-<div class="px-6 md:px-20 mb-8 max-w-[1200px] mx-auto flex justify-between items-center">
-<div>
-<h2 class="text-2xl font-bold text-white">OUR BRIDAL COLLECTION</h2>
-<p class="text-muted-grey text-sm">Real Brides • Real Beauty</p>
-</div>
-<a class="text-white font-bold hover:underline" href="#">Follow @mehandis_bridal_rentals</a>
-</div>
-<div class="flex gap-2 px-2 overflow-x-auto no-scrollbar">
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Real bride photo from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDN6A8kYwrr8vZfueZzE4cey9iK5hXxbNbNsQlW6QlHXCH3QDqsJDzYdRIrUKdWeZMt7JNOAvKPLjABzMhNDMskwavl4jR19S-NDlWGAXPjWNjwysy7el4i8KceqGoozrvDwHNhfU9Kl28XgKN47yFcyn-Mezre5UfMWsgXnpTMk_BBDc5teft9jnhG3zmoMJE2IZZ9Z1tYBWeGsIeOhaAln5IKiV978eBLWUAEMfQbJZ98nwIt_w77WA5TnPlDmatc_EwhhqywL9Gt");'></div>
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Detailed jewellery shot from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWBvrVxToRfq6OR16rKvyJ7dYmYSNUsLh_Sl5fiH6oaWUOw711A0B_rT0JMaBgubEwe6PvhuOLjOA6VcnMpuIsztUDfMkLGhPtkIN6GNTWWKE6caDkhVI9vhOlsHzQx5l9x3tO-6Ha2WdicuGQ6rcVHE1HMkgR6EQuLkFg8GsqB6PhmHA97IUZnt4jqX9mS7oaqlDncN9nU94FBp92UhifzZq7ayrPP6y4K-5YaRdy1DCruBVh4O-I4nkF-mw4QWLwDQ70UFbLdIla");'></div>
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Bridal dress display from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBng5bSeGv2P2ccEoqH_UBm8zllKuiwiueFgVJe0-y_PKGGmV3wwGw34xGGRdm1WS0OGKElMOSPNNgrTe1rKU9INa5HUjhhHv8un6FhcQWgAUy7R9YZl-KEbyvEvz3eImD8QoR-rQsBq0LFSrtrbGSO47C64UlfudUEEE055X3xoKINSZmxsYPs5dJPkX2xCf892TWmgzCN25UvFymmysOvFqtLVACcmJewlwGH3vSP9zWl4jAn6Nwca6wxTXX7dOb_nxO3Hgi3ZPgT");'></div>
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Bride styling session from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKjKrv_AHKiHrYaYz7f_wua-Gsrl-_DtcRmy6okFT5Gz4bv36blRrXqD5V9fy6q8h1k2brzGM1j5dT9cwq3PSSewHfOI6JD0mvrBlYsNaRaT99ueGNFdwcFaD40ExBHkKpOwz3j2zIVJkXyHRQV02DCdSoWo8k_ZMcLoTLr6Ub85EI7pxphEZLV_rhMaXVJjxN-g8YK52qPyuov1OaM1lxpNWv1BJyGlE1rrcysEG9-UH96cXME_WAmAl6Kc73ftYlzUPp2LVq8Igv");'></div>
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Customer review from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsdlX32tPrPX8ano6vb9I4pFPx8oOL_cEjolGEfx_Wz67sNfPeRHH2PFZXNhZQj5eXY_hRbCeTbb97jew2fmnUEmo_A9fMiVeSyYM9SgD-PTq_mnZfbDkceHPfzdcgSeF_x__-dqsmPR2HnVeXALnukBuW_ft7ec92uJ6nt0DEHupAOT5lNHSkVR9dXdgA2UCYRzTbH_-eNgYLju7A9iQMMt0zAv_qS5Fujqyem01KFNNDy0Xm2AoHzYiLrYQ_A5LcLmS_1kJ-qRcz");'></div>
-<div class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle" data-alt="Store interior from instagram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuZoSv_nDkV5jJtfFMwfSGjx50pNczhHHDLag3xi-lFWldFVsIpkBIrBIi9w5PsI7U1W32uUKpf_oQKB248MG7KOMXcDmXUpyWwhM4TSWwoWG7635Anw3drfofm2MdKwrgh2mxMcNOOo7Zp-CFMVl9kZc9NdCNC-8BFGJE84trKdi1LPesHRIXW_GBbiFDPCuBmUflUIGruzLfQSWCgSgGg9sYOsjkJ6rmeW7NRkatYKiq6b_6_IAGl87c5CFXkqbn7ce3-9AOcXLR");'></div>
-</div>
-</section>
-<section class="px-6 md:px-20 py-20 bg-background-main border-t border-border-subtle text-center">
-<div class="max-w-[1200px] mx-auto space-y-8">
-<h2 class="text-4xl md:text-5xl font-black text-white">Book Your Bridal Look Today</h2>
-<p class="text-xl text-muted-grey max-w-2xl mx-auto">Don’t compromise on your bridal dreams. Choose Mehandis Bridal Rentals and shine on your special day.</p>
-<div class="flex flex-wrap justify-center gap-8 text-white font-bold">
-<span>Affordable Luxury</span>
-<span>Trusted by Brides</span>
-<span>Instagram-Famous Collections</span>
-</div>
-<div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-<button class="flex items-center justify-center gap-2 rounded-full h-14 px-10 interactive-accent text-background-main font-bold text-lg hover:bg-neutral-200 transition-all">
-                    👉 Book Now on WhatsApp
-                </button>
-</div>
-</div>
-</section>
-</main>
-<footer class="px-6 md:px-20 py-20 bg-card-bg border-t border-border-subtle" id="contact">
-<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-2 space-y-6">
-<div class="flex items-center gap-3">
-<div class="size-6 text-white">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold tracking-tight text-white uppercase">Mehandis Bridal</h2>
-</div>
-<p class="text-muted-grey max-w-sm">Perinthalmanna's premier destination for high-end bridal rental wear. From exquisite lehengas to antique jewellery, we bring luxury to your special day.</p>
-<div class="flex flex-col gap-4 text-muted-grey text-sm">
-<p class="font-bold text-white">👉 DM or WhatsApp us for:</p>
-<ul class="space-y-1">
-<li>• Availability check</li>
-<li>• Pricing details</li>
-</ul>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="font-bold text-lg text-white">📍 Visit Our Store</h4>
-<ul class="space-y-4 text-muted-grey text-sm">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-white text-sm mt-1">location_on</span>
-<span>Padippura, Calicut Road,<br/>Perinthalmanna, Malappuram, Kerala</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-white text-sm">schedule</span>
-<span>Mon – Sun: 10:00 AM – 8:00 PM</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-white text-sm">chat</span>
-<a class="hover:text-white" href="#">WhatsApp: Click to Book</a>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-white text-sm">camera_alt</span>
-<a class="hover:text-white" href="#">Instagram: @mehandis_bridal_rentals</a>
-</li>
-</ul>
-</div>
-<div class="space-y-6">
-<h4 class="font-bold text-lg text-white">Location Map</h4>
-<div class="rounded-lg overflow-hidden h-40 bg-black border border-border-subtle">
-<div class="w-full h-full bg-neutral-900 flex items-center justify-center">
-<button class="text-xs bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white">Open Google Maps</button>
-</div>
-</div>
-</div>
-</div>
-<div class="max-w-[1200px] mx-auto mt-20 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4 text-muted-grey/60 text-xs">
-<p>© 2024 Mehandis Bridal Rentals. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white" href="#">Privacy Policy</a>
-<a class="hover:text-white" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
-</div>
+  </head>
+  <body class="bg-background-main text-white transition-colors duration-300">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-border-subtle bg-background-main/90 backdrop-blur-md px-6 md:px-20 py-4"
+      >
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="size-8">
+              <img
+                src="assets/empty_logo_transparent_c.png"
+                alt="logo"
+                class="w-full h-full object-contain"
+              />
+            </div>
 
-</body></html>
+            <h2 class="text-xl font-bold tracking-tight text-white uppercase">
+              Mehandis Bridal
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-sm font-medium hover:text-white transition-colors text-muted-grey"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-sm font-medium hover:text-white transition-colors text-muted-grey"
+              href="#about"
+              >About</a
+            >
+            <a
+              class="text-sm font-medium hover:text-white transition-colors text-muted-grey"
+              href="#services"
+              >Services</a
+            >
+            <a
+              class="text-sm font-medium hover:text-white transition-colors text-muted-grey"
+              href="#pricing"
+              >Pricing</a
+            >
+            <a
+              class="text-sm font-medium hover:text-white transition-colors text-muted-grey"
+              href="#contact"
+              >Contact</a
+            >
+          </nav>
+          <a
+            href="https://wa.me/919876543210?text=Hi%2C%20I%E2%80%99d%20like%20to%20book.%20Please%20share%20details%20and%20availability."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-10 px-6 interactive-accent text-background-main text-sm font-bold hover:bg-neutral-200 transition-all"
+          >
+            <i class="fa-brands fa-whatsapp text-green-500 mr-1 text-xl"></i>
+            <span>Book via WhatsApp</span>
+          </a>
+        </div>
+      </header>
+      <main class="flex-1">
+        <section class="px-6 md:px-20 py-10">
+          <div class="max-w-[1200px] mx-auto">
+            <div
+              class="relative overflow-hidden rounded-xl min-h-[600px] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center border border-border-subtle"
+              data-alt="Stunning bride in a red luxury lehenga posing elegantly"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                  url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDFnSKHgXd69in7Q-h7bc0sEoNeCVC5pkdm5PmxuTv-wmRE52eT8hyKLrzpKJXTfrbkkwvNNKT6PkcP4H44YHVpYYRh3db1NqqRzZ-k_TdTd802h2WnRM3rNUxyoVj8vmORO4s6AzWdyPNNOH2O8LxhF4GIVy_zdwxUESvASXbK6Dz4XmZ3XdwOJ-WCQwDdb08jNam_u3Z0S41yGpkf8I14QvRcXnoPCBfongS1ZywVjgnJqKXY_mjA4WYkiphmgu6YJfgP89rjDoAf&quot;);
+              "
+            >
+              <div class="max-w-3xl space-y-6">
+                <p
+                  class="text-white text-sm font-bold tracking-[0.2em] uppercase"
+                >
+                  MEHANDIS BRIDAL RENTALS <br />
+                  Perinthalmanna, Kerala
+                </p>
+                <h1
+                  class="text-4xl md:text-7xl font-black leading-tight tracking-tight text-white"
+                >
+                  Your Dream Bridal Look
+                  <span class="text-white border-b-4 border-white"
+                    >Starts Here</span
+                  >
+                </h1>
+                <p class="text-lg md:text-xl font-light text-muted-grey">
+                  Mehandis Bridal Rentals is a trusted name in bridal dress and
+                  jewellery rentals in Perinthalmanna. We help brides look
+                  royal, elegant, and confident on their most special day —
+                  without spending lakhs.
+                </p>
+
+                <ul
+                  class="text-white/80 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base font-medium"
+                >
+                  <li class="flex items-center gap-1">Luxury bridal wear</li>
+                  <li class="flex items-center gap-1">
+                    Premium jewellery collections
+                  </li>
+                  <li class="flex items-center gap-1">
+                    Affordable rental packages
+                  </li>
+                  <li class="flex items-center gap-1">Trusted by thousands</li>
+                </ul>
+                <div
+                  class="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+                >
+                  <a
+                    href="https://wa.me/919876543210?text=Hi%2C%20I%E2%80%99d%20like%20to%20book.%20Please%20share%20details%20and%20availability."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center gap-2 rounded-full h-14 px-8 bg-transparent text-white border border-white font-bold text-lg hover:bg-white hover:text-black transition-all"
+                  >
+                    Book Now on WhatsApp
+                  </a>
+                  <a
+                    href="https://instagram.com/mehandis_bridal_rentals"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center gap-2 rounded-full h-14 px-8 bg-transparent text-white border border-white font-bold text-lg hover:bg-white hover:text-black transition-all"
+                  >
+                    Explore Instagram Gallery
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-6 md:px-20 py-16" id="about">
+          <div class="max-w-[1200px] mx-auto">
+            <div class="flex flex-col gap-12">
+              <div class="flex flex-col gap-4">
+                <h2
+                  class="text-white text-sm font-bold uppercase tracking-widest border-l-2 border-white pl-4"
+                >
+                  ABOUT US
+                </h2>
+                <h3
+                  class="text-3xl md:text-5xl font-bold leading-tight max-w-[800px] text-white"
+                >
+                  Every bride deserves to look stunning — without financial
+                  stress.
+                </h3>
+                <p class="text-muted-grey text-lg max-w-[720px]">
+                  Mehandis Bridal Rentals is a premium bridal rental boutique
+                  located in Perinthalmanna, Malappuram district. We specialize
+                  in providing high-quality bridal dresses, jewellery, and
+                  complete bridal styling support for weddings, engagements,
+                  receptions, and special occasions.
+                </p>
+                <p class="text-muted-grey text-lg max-w-[720px]">
+                  With years of experience and strong social media presence, we
+                  have styled hundreds of happy brides across Kerala.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                  class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group"
+                >
+                  <div
+                    class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all"
+                  >
+                    <span class="material-symbols-outlined text-3xl"
+                      >verified</span
+                    >
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="text-xl font-bold text-white">
+                      Premium Collection
+                    </h4>
+                    <p class="text-muted-grey leading-relaxed">
+                      Luxury bridal wear and premium jewellery collections,
+                      featuring trendy and traditional designs, with clean and
+                      well-maintained outfits for every bride.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group"
+                >
+                  <div
+                    class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all"
+                  >
+                    <span class="material-symbols-outlined text-3xl"
+                      >favorite</span
+                    >
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="text-xl font-bold text-white">
+                      Trusted by Thousands
+                    </h4>
+                    <p class="text-muted-grey leading-relaxed">
+                      Built on genuine trust and reviews, we have styled
+                      hundreds of happy brides across Kerala with professional
+                      and personalized service.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-5 rounded-lg border border-border-subtle bg-card-bg p-8 hover:border-white transition-colors group"
+                >
+                  <div
+                    class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-all"
+                  >
+                    <span class="material-symbols-outlined text-3xl"
+                      >payments</span
+                    >
+                  </div>
+                  <div class="space-y-2">
+                    <h4 class="text-xl font-bold text-white">
+                      Affordable Packages
+                    </h4>
+                    <p class="text-muted-grey leading-relaxed">
+                      Luxury bridal looks made truly affordable. Enjoy premium
+                      quality, elegant styling, and flawless designs, helping
+                      every bride look stunning on her big day without financial
+                      stress.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-6 md:px-20 py-16 bg-background-main" id="services">
+          <div class="max-w-[1200px] mx-auto">
+            <div
+              class="flex justify-between items-end mb-10 border-b border-border-subtle pb-6"
+            >
+              <div class="space-y-2">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">
+                  OUR SERVICES
+                </h2>
+                <p class="text-muted-grey">
+                  We offer a wide range of bridal outfits and premium jewellery
+                  collections.
+                </p>
+              </div>
+              <!-- <a
+                class="text-white font-bold flex items-center gap-2 hover:underline transition-all"
+                href="#"
+              >
+                View details
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a> -->
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div
+                class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle"
+                data-alt="A row of luxury designer bridal lehengas on hangers"
+                style="
+                  background-image:
+                    linear-gradient(
+                      0deg,
+                      rgba(0, 0, 0, 0.95) 0%,
+                      rgba(0, 0, 0, 0) 50%
+                    ),
+                    url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC2IRaEnuVdJEni6yBpUKlpbusfB3I2zrw6zAJBiveu_mOH-67JMbSku_4q10jg4HWj-XWbfO9kk0vGr_mp5JsLLW8p6hD27ltt6E1W8LDNdb3cAz0NuSj9_Mr1XTvFdIIDUWYW-SBF_w5FC_PV4M8RHB-4yhNAe5hfJvaLTcpffFU8ZgfduOs9EvC87EXarClL_qwfacYfXAf-DiLbT9XLnceIEGpwS1UKxcdS7DJOe4fTIi_ukbczl_wwMbZ4tzzeqhtqfRRNaWtw&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform"
+                >
+                  <h4 class="text-2xl font-bold text-white mb-2">
+                    Bridal Dress Rentals
+                  </h4>
+                  <p
+                    class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  >
+                    Bridal Lehengas, Wedding Gowns, Engagement &amp; Reception
+                    dresses, Traditional Kerala Wear.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle"
+                data-alt="Close up of intricate gold and diamond bridal necklace set"
+                style="
+                  background-image:
+                    linear-gradient(
+                      0deg,
+                      rgba(0, 0, 0, 0.95) 0%,
+                      rgba(0, 0, 0, 0) 50%
+                    ),
+                    url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCIHW3hOH_3IqH0dWtSBdWvkO1zI_-jZGd9C0tkrUn511wUXvOfWyxswTA-4QF47CSSPHjO8lPd5mtLuYstrMfSEnMa_ZIZndc9PHadP9FPspHLG7NaQ3ryS152-ET4Hie3iEEZ1wZtk9s8UkFhcwX5UVHqZC2l1iXAVelq9H4H6vzCXLfgGLEz2PMEFzmdvvv6FqwlHqYJaVmJuBbt0Aaq03GxgjoO0pRv5eU4DJYwtSzBZC7_oDG9NjakEoYBCVvToz0UpYd3ebSP&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform"
+                >
+                  <h4 class="text-2xl font-bold text-white mb-2">
+                    Jewellery Rentals
+                  </h4>
+                  <p
+                    class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  >
+                    Temple Jewellery, Antique Gold Finish, Heavy bridal sets,
+                    and Lightweight elegant designs.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-cover bg-center cursor-pointer border border-border-subtle"
+                data-alt="Professional stylist adjusting a bride's dupatta"
+                style="
+                  background-image:
+                    linear-gradient(
+                      0deg,
+                      rgba(0, 0, 0, 0.95) 0%,
+                      rgba(0, 0, 0, 0) 50%
+                    ),
+                    url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC7cXshaI_I4k-Pmr_5TSlncrL7bVb0jfk01wCsA40uQGf-dr6HE3gBAJM3ToomMjlf7PO-EMVlXgLtKHRqxTl2G7VHRZkUQy53JuEoPFLP3jMjT-E66_oACKCjXgnsfTA1ao9uJLCkBmVcdQMF8igeiQRLvowWYnbQnlLTp_tyDK0pI_tCWaPPeZgBXj_NcPgbVwEMDN6uS0autpB5EojkSTZPvmtXPcDfVSUPBYk5FNjzd1LJp32FX3MTgw-Vlcr8ORvzaYMa-Sc-&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 p-8 w-full transform group-hover:-translate-y-2 transition-transform"
+                >
+                  <h4 class="text-2xl font-bold text-white mb-2">
+                    Look Assistance
+                  </h4>
+                  <p
+                    class="text-muted-grey text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  >
+                    Dress + Jewellery matching, styling guidance, and look
+                    suggestions based on face &amp; outfit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-6 md:px-20 py-16" id="pricing">
+          <div class="max-w-[1200px] mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+              PRICING (STARTING RANGE)
+            </h2>
+            <p class="text-muted-grey mb-12 max-w-2xl mx-auto">
+              Final pricing depends on design, fabric, and collection. Contact
+              us on WhatsApp for exact prices &amp; availability.
+            </p>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1100px] mx-auto"
+            >
+              <div
+                class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 relative overflow-hidden hover:border-white transition-colors"
+              >
+                <h4 class="text-xl font-bold text-white">
+                  Bridal Dress Rentals
+                </h4>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-medium text-muted-grey"
+                    >Starting from</span
+                  >
+                  <span class="text-4xl font-black text-white">₹5,000</span>
+                </div>
+                <ul
+                  class="text-left space-y-3 w-full border-t border-border-subtle pt-6"
+                >
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Multiple sizes &amp; colors
+                  </li>
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Modern + traditional designs
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20check%20availability%20for%20Bridal%20Dress%20Rentals%20(Starting%20from%20%E2%82%B95%2C000).%20Please%20share%20details."
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors"
+                >
+                  Check Availability
+                </a>
+              </div>
+              <div
+                class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 hover:border-white transition-colors"
+              >
+                <h4 class="text-xl font-bold text-white">
+                  Bridal Jewellery Rentals
+                </h4>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-medium text-muted-grey"
+                    >Starting from</span
+                  >
+                  <span class="text-4xl font-black text-white">₹2,000</span>
+                </div>
+                <ul
+                  class="text-left space-y-3 w-full border-t border-border-subtle pt-6"
+                >
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Heavy bridal sets
+                  </li>
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Lightweight elegant designs
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20check%20availability%20for%20Bridal%20Jewellery%20Rentals%20(Starting%20from%20%E2%82%B92%2C000).%20Please%20share%20details."
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors"
+                >
+                  Check Availability
+                </a>
+              </div>
+              <div
+                class="p-10 rounded-xl border border-border-subtle bg-card-bg flex flex-col items-center gap-6 hover:border-white transition-colors"
+              >
+                <h4 class="text-xl font-bold text-white">
+                  Bridal Look Packages
+                </h4>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-medium text-muted-grey"
+                    >Available via</span
+                  >
+                  <span class="text-4xl font-black text-white">Custom</span>
+                </div>
+                <ul
+                  class="text-left space-y-3 w-full border-t border-border-subtle pt-6"
+                >
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Dress + Jewellery matching
+                  </li>
+                  <li class="flex gap-2 items-center text-muted-grey text-sm">
+                    <span class="material-symbols-outlined text-white text-sm"
+                      >check_circle</span
+                    >
+                    Styling guidance
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20check%20availability%20for%20Bridal%20Look%20Packages%20(Custom%20%E2%80%93%20Dress%20%2B%20Jewellery%20matching%20%26%20Styling%20guidance).%20Please%20share%20details."
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="w-full py-4 bg-transparent rounded-full font-bold text-white border border-white mt-4 hover:bg-white hover:text-black transition-colors"
+                >
+                  Enquire Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="px-6 md:px-20 py-16 bg-card-bg">
+          <div class="max-w-[1200px] mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">TESTIMONIALS</h2>
+            <p class="text-muted-grey mb-12">
+              Hundreds of happy brides across Kerala
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left"
+              >
+                <p class="italic text-muted-grey text-sm">
+                  “Beautiful collection and very affordable pricing. Highly
+                  recommended!”
+                </p>
+                <div class="flex star-rating pt-2">
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                </div>
+              </div>
+              <div
+                class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left"
+              >
+                <p class="italic text-muted-grey text-sm">
+                  “Jewellery quality was amazing, everyone asked where we got it
+                  from.”
+                </p>
+                <div class="flex star-rating pt-2">
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                </div>
+              </div>
+              <div
+                class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left"
+              >
+                <p class="italic text-muted-grey text-sm">
+                  “Friendly staff and perfect bridal suggestions.”
+                </p>
+                <div class="flex star-rating pt-2">
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                </div>
+              </div>
+              <div
+                class="bg-black p-8 rounded-xl border border-border-subtle space-y-4 text-left"
+              >
+                <p class="italic text-muted-grey text-sm">
+                  “Trusted shop in Perinthalmanna for bridal rentals.”
+                </p>
+                <div class="flex star-rating pt-2">
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                  <span class="material-symbols-outlined text-xs">star</span>
+                </div>
+              </div>
+            </div>
+            <p class="mt-12 text-white font-bold tracking-widest uppercase">
+              Hundreds of happy brides across Kerala
+            </p>
+          </div>
+        </section>
+        <section class="py-16 overflow-hidden">
+          <div
+            class="px-6 md:px-20 mb-8 max-w-[1200px] mx-auto flex justify-between items-center"
+          >
+            <div>
+              <h2 class="text-2xl font-bold text-white">
+                OUR BRIDAL COLLECTION
+              </h2>
+              <p class="text-muted-grey text-sm">Real Brides • Real Beauty</p>
+            </div>
+            <a
+              class="text-white font-bold hover:underline"
+              href="https://instagram.com/mehandis_bridal_rentals"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Follow @mehandis_bridal_rentals</a
+            >
+          </div>
+          <div class="flex gap-2 px-2 overflow-x-auto no-scrollbar">
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Real bride photo from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDN6A8kYwrr8vZfueZzE4cey9iK5hXxbNbNsQlW6QlHXCH3QDqsJDzYdRIrUKdWeZMt7JNOAvKPLjABzMhNDMskwavl4jR19S-NDlWGAXPjWNjwysy7el4i8KceqGoozrvDwHNhfU9Kl28XgKN47yFcyn-Mezre5UfMWsgXnpTMk_BBDc5teft9jnhG3zmoMJE2IZZ9Z1tYBWeGsIeOhaAln5IKiV978eBLWUAEMfQbJZ98nwIt_w77WA5TnPlDmatc_EwhhqywL9Gt&quot;);
+              "
+            ></div>
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Detailed jewellery shot from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBWBvrVxToRfq6OR16rKvyJ7dYmYSNUsLh_Sl5fiH6oaWUOw711A0B_rT0JMaBgubEwe6PvhuOLjOA6VcnMpuIsztUDfMkLGhPtkIN6GNTWWKE6caDkhVI9vhOlsHzQx5l9x3tO-6Ha2WdicuGQ6rcVHE1HMkgR6EQuLkFg8GsqB6PhmHA97IUZnt4jqX9mS7oaqlDncN9nU94FBp92UhifzZq7ayrPP6y4K-5YaRdy1DCruBVh4O-I4nkF-mw4QWLwDQ70UFbLdIla&quot;);
+              "
+            ></div>
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Bridal dress display from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBng5bSeGv2P2ccEoqH_UBm8zllKuiwiueFgVJe0-y_PKGGmV3wwGw34xGGRdm1WS0OGKElMOSPNNgrTe1rKU9INa5HUjhhHv8un6FhcQWgAUy7R9YZl-KEbyvEvz3eImD8QoR-rQsBq0LFSrtrbGSO47C64UlfudUEEE055X3xoKINSZmxsYPs5dJPkX2xCf892TWmgzCN25UvFymmysOvFqtLVACcmJewlwGH3vSP9zWl4jAn6Nwca6wxTXX7dOb_nxO3Hgi3ZPgT&quot;);
+              "
+            ></div>
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Bride styling session from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDKjKrv_AHKiHrYaYz7f_wua-Gsrl-_DtcRmy6okFT5Gz4bv36blRrXqD5V9fy6q8h1k2brzGM1j5dT9cwq3PSSewHfOI6JD0mvrBlYsNaRaT99ueGNFdwcFaD40ExBHkKpOwz3j2zIVJkXyHRQV02DCdSoWo8k_ZMcLoTLr6Ub85EI7pxphEZLV_rhMaXVJjxN-g8YK52qPyuov1OaM1lxpNWv1BJyGlE1rrcysEG9-UH96cXME_WAmAl6Kc73ftYlzUPp2LVq8Igv&quot;);
+              "
+            ></div>
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Customer review from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBsdlX32tPrPX8ano6vb9I4pFPx8oOL_cEjolGEfx_Wz67sNfPeRHH2PFZXNhZQj5eXY_hRbCeTbb97jew2fmnUEmo_A9fMiVeSyYM9SgD-PTq_mnZfbDkceHPfzdcgSeF_x__-dqsmPR2HnVeXALnukBuW_ft7ec92uJ6nt0DEHupAOT5lNHSkVR9dXdgA2UCYRzTbH_-eNgYLju7A9iQMMt0zAv_qS5Fujqyem01KFNNDy0Xm2AoHzYiLrYQ_A5LcLmS_1kJ-qRcz&quot;);
+              "
+            ></div>
+            <div
+              class="min-w-[200px] aspect-square rounded-lg bg-cover bg-center bg-card-bg hover:border-white transition-all duration-500 border border-border-subtle"
+              data-alt="Store interior from instagram"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCuZoSv_nDkV5jJtfFMwfSGjx50pNczhHHDLag3xi-lFWldFVsIpkBIrBIi9w5PsI7U1W32uUKpf_oQKB248MG7KOMXcDmXUpyWwhM4TSWwoWG7635Anw3drfofm2MdKwrgh2mxMcNOOo7Zp-CFMVl9kZc9NdCNC-8BFGJE84trKdi1LPesHRIXW_GBbiFDPCuBmUflUIGruzLfQSWCgSgGg9sYOsjkJ6rmeW7NRkatYKiq6b_6_IAGl87c5CFXkqbn7ce3-9AOcXLR&quot;);
+              "
+            ></div>
+          </div>
+        </section>
+        <section
+          class="px-6 md:px-20 py-20 bg-background-main border-t border-border-subtle text-center"
+        >
+          <div class="max-w-[1200px] mx-auto space-y-8">
+            <h2 class="text-4xl md:text-5xl font-black text-white">
+              Book Your Bridal Look Today
+            </h2>
+            <p class="text-xl text-muted-grey max-w-2xl mx-auto">
+              Don’t compromise on your bridal dreams. Choose Mehandis Bridal
+              Rentals and shine on your special day.
+            </p>
+            <div
+              class="flex flex-wrap justify-center gap-8 text-white font-bold"
+            >
+              <span>Affordable Luxury</span>
+              <span>Trusted by Brides</span>
+              <span>Instagram-Famous Collections</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <a
+                href="https://wa.me/919876543210?text=Hi%2C%20I%E2%80%99d%20like%20to%20book.%20Please%20share%20details%20and%20availability."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 rounded-full h-14 px-10 interactive-accent text-background-main font-bold text-lg hover:bg-neutral-200 transition-all"
+              >
+                Book Now on WhatsApp
+                <i class="fa-brands fa-whatsapp text-green-500 text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="px-6 md:px-20 py-20 bg-card-bg border-t border-border-subtle"
+        id="contact"
+      >
+        <div
+          class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+        >
+          <div class="col-span-1 md:col-span-2 space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="size-8">
+                <img
+                  src="assets/empty_logo_transparent_c.png"
+                  alt="logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h2 class="text-xl font-bold tracking-tight text-white uppercase">
+                Mehandis Bridal
+              </h2>
+            </div>
+            <p class="text-muted-grey max-w-sm">
+              Perinthalmanna's premier destination for high-end bridal rental
+              wear. From exquisite lehengas to antique jewellery, we bring
+              luxury to your special day.
+            </p>
+            <div class="flex flex-col gap-4 text-muted-grey text-sm">
+              <p class="font-bold text-white">👉 DM or WhatsApp us for:</p>
+              <ul class="space-y-1">
+                <li>• Availability check</li>
+                <li>• Pricing details</li>
+              </ul>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h4 class="font-bold text-lg text-white">📍 Visit Our Store</h4>
+            <ul class="space-y-4 text-muted-grey text-sm">
+              <li class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-location-dot text-white text-lg mt-1 transition-colors group-hover:text-muted-grey"
+                ></i>
+
+                <a
+                  href="https://maps.app.goo.gl/2V5pq56WY1VkFqhs6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  1st Floor, Ayisha Complex, Perinthalmanna Malappuram, Kerala
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i
+                  class="fa-solid fa-clock text-white text-lg transition-colors group-hover:text-muted-grey"
+                ></i>
+
+                Mon – Sun: 10:00 AM – 8:00 PM
+              </li>
+              <li class="flex items-center gap-3">
+                <i
+                  class="fa-brands fa-whatsapp text-white text-lg transition-colors group-hover:text-muted-grey"
+                ></i>
+
+                <a
+                  href="https://wa.me/919876543210?text=Hi%2C%20I%E2%80%99d%20like%20to%20book.%20Please%20share%20details%20and%20availability."
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="hover:text-white"
+                >
+                  Click to Book
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i
+                  class="fa-brands fa-instagram text-white text-lg transition-colors group-hover:text-muted-grey"
+                ></i>
+
+                <a
+                  href="https://instagram.com/mehandis_bridal_rentals"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="hover:text-white"
+                >
+                  @mehandis_bridal_rentals
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h4 class="font-bold text-lg text-white">Location Map</h4>
+            <div
+              class="rounded-lg overflow-hidden h-40 bg-black border border-border-subtle"
+            >
+              <div
+                class="w-full h-full bg-neutral-900 flex items-center justify-center"
+              >
+                <button
+                  class="text-xs bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white"
+                >
+                  Open Google Maps
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[1200px] mx-auto mt-20 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4 text-muted-grey/60 text-xs"
+        >
+          <p>© 2024 Mehandis Bridal Rentals. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a class="hover:text-white" href="#">Privacy Policy</a>
+            <a class="hover:text-white" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
